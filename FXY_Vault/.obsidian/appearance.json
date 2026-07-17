@@ -1,10 +1,5 @@
 {
-<<<<<<< HEAD
   "cssTheme": "AnuPpuccin",
   "theme": "obsidian",
-  "accentColor": "#9c7ee2"
-=======
-  "cssTheme": "Minimal",
-  "theme": "system"
->>>>>>> 635eb20 (vault backup: 2026-07-17 13:37:31)
+  "baseFontSize": 20
 }
