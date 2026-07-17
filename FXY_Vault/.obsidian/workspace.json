@@ -4,35 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "5965b97880b1b1d2",
-        "type": "tabs",
-        "dimension": 78.4427966101695,
-        "children": [
-          {
-            "id": "896acf669b0f9c55",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
-            }
-          }
-        ]
-      },
-      {
         "id": "5f7841b50eadeaea",
         "type": "tabs",
-        "dimension": 21.55720338983051,
         "children": [
           {
             "id": "40aa110cc982d60d",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "Papers/Flow_Straight_and_Fast_Rectified_Flow_论文完整分析.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Flow_Straight_and_Fast_Rectified_Flow_论文完整分析"
             }
           }
         ]
@@ -108,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Papers/Flow_Straight_and_Fast_Rectified_Flow_论文完整分析.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for Flow_Straight_and_Fast_Rectified_Flow_论文完整分析"
             }
           },
           {
@@ -185,13 +172,23 @@
               "icon": "calendar-with-checkmark",
               "title": "Calendar"
             }
+          },
+          {
+            "id": "51b2140de15f4303",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
-        ]
+        ],
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -206,8 +203,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "896acf669b0f9c55",
+  "active": "40aa110cc982d60d",
   "lastOpenFiles": [
+    "Papers/Flow_Straight_and_Fast_Rectified_Flow_论文完整分析.md",
     "Papers/AutoVLA.md",
     "Papers/OpenDriveVLA.md",
     "2026-07-15.md",
