@@ -6,35 +6,19 @@
       {
         "id": "5965b97880b1b1d2",
         "type": "tabs",
-        "dimension": 52.24913494809689,
         "children": [
           {
             "id": "896acf669b0f9c55",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Papers/OpenDriveVLA.md"
+                "file": "Learning/交叉熵、KL 散度、熵三者关系.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "excalidraw-icon",
-              "title": "OpenDriveVLA"
-            }
-          }
-        ]
-      },
-      {
-        "id": "5f7841b50eadeaea",
-        "type": "tabs",
-        "dimension": 47.75086505190311,
-        "children": [
-          {
-            "id": "40aa110cc982d60d",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "icon": "lucide-file",
+              "title": "交叉熵、KL 散度、熵三者关系"
             }
           }
         ]
@@ -220,8 +204,8 @@
   },
   "active": "d653110a618a72e8",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
     "Papers/OpenDriveVLA.md",
+    "conflict-files-obsidian-git.md",
     "Learning/交叉熵、KL 散度、熵三者关系.md",
     "Papers/Flow_Straight_and_Fast_Rectified_Flow_论文完整分析.md",
     "Learning",
