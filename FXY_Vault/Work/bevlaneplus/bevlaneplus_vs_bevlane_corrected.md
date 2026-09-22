@@ -30,25 +30,25 @@ BEVLanePlus 延续了 BEVLane 的“图像 backbone/FPN → LSS → BEV encoder 
 
 ## 3. 总览表
 
-| 维度 | BEVLane v035_1 | BEVLanePlus v006 | 变化 |
-|---|---|---|---|
-| Detector | `SiameseBEVLANE` | `SiameseBEVLANE_FISHEYE` | 增加鱼眼、多模态、先验及时序链路 |
-| Backbone | ResNet18 | ResNet34 | 图像特征能力增强 |
-| 相机 | cam1、cam0 | cam1、cam0、cam21、cam23 | 增加左右鱼眼 |
-| 输入尺寸 | 352×704 | 352×704 | 单相机尺寸不变 |
-| 模态 | Camera | Camera + LiDAR + 地图先验 | 多源 BEV |
-| BEV 范围 | x=[0,153.6]，y=[-12.8,12.8] | x=[0,153.6]，y=[-25.6,25.6] | 横向覆盖翻倍 |
-| LSS grid | x=128，y=128 | x=128，y=256 | 横向栅格翻倍 |
-| 静态采样 BEV | x=128，y=128 | x=192，y=256 | 总栅格数约 3 倍 |
-| Decoder | `MapQRDecoder`，2 层 | `MapQRSparseDecoder`，3 层 | 稀疏、分阶段 refine、时序化 |
-| Query | 30 map + 4 junction | 241 classified anchors | 按要素分配容量 |
-| 时序实例 | 无 | 62 个缓存实例 | 跨帧传播和关联 |
-| DN | 无 | DN + temporal DN | 稳定匹配和训练 |
-| 地图先验 | `ldmap_gt_flag` 参与旧 head loss | Nav/SD encoder + LDLite encoder/fusion | 先验进入特征和 decoder |
-| 输出 | 基础折线、属性和辅助 topology | geometry + subtype + topology + ID | 结构化地图 |
-| Dataset | `BEVMTKDataset` | `PhigentMapDataset` | 序列化数据组织 |
-| Runner | EpochBased，6 epochs | IterBased，按 5 epochs 换算 | 训练调度重构 |
-| AdamW | lr=2e-4 | lr=1e-4，部分模块 0.1× | 差分学习率 |
+| 维度       | BEVLane v035_1                | BEVLanePlus v006                       | 变化                |     |
+| -------- | ----------------------------- | -------------------------------------- | ----------------- | --- |
+| Detector | `SiameseBEVLANE`              | `SiameseBEVLANE_FISHEYE`               | 增加鱼眼、多模态、先验及时序链路  |     |
+| Backbone | ResNet18                      | ResNet34                               | 图像特征能力增强          |     |
+| 相机       | cam1、cam0                     | cam1、cam0、cam21、cam23                  | 增加左右鱼眼            |     |
+| 输入尺寸     | 352×704                       | 352×704                                | 单相机尺寸不变           |     |
+| 模态       | Camera                        | Camera + LiDAR + 地图先验                  | 多源 BEV            |     |
+| BEV 范围   | x=[0,153.6]，y=[-12.8,12.8]    | x=[0,153.6]，y=[-25.6,25.6]             | 横向覆盖翻倍            |     |
+| LSS grid | x=128，y=128                   | x=128，y=256                            | 横向栅格翻倍            |     |
+| 静态采样 BEV | x=128，y=128                   | x=192，y=256                            | 总栅格数约 3 倍         |     |
+| Decoder  | `MapQRDecoder`，2 层            | `MapQRSparseDecoder`，3 层               | 稀疏、分阶段 refine、时序化 |     |
+| Query    | 30 map + 4 junction           | 241 classified anchors                 | 按要素分配容量           |     |
+| 时序实例     | 无                             | 62 个缓存实例                               | 跨帧传播和关联           |     |
+| DN       | 无                             | DN + temporal DN                       | 稳定匹配和训练           |     |
+| 地图先验     | `ldmap_gt_flag` 参与旧 head loss | Nav/SD encoder + LDLite encoder/fusion | 先验进入特征和 decoder   |     |
+| 输出       | 基础折线、属性和辅助 topology           | geometry + subtype + topology + ID     | 结构化地图             |     |
+| Dataset  | `BEVMTKDataset`               | `PhigentMapDataset`                    | 序列化数据组织           |     |
+| Runner   | EpochBased，6 epochs           | IterBased，按 5 epochs 换算                | 训练调度重构            |     |
+| AdamW    | lr=2e-4                       | lr=1e-4，部分模块 0.1×                      | 差分学习率             |     |
 
 ## 4. 图像与 BEV 分支
 
