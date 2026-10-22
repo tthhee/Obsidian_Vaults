@@ -25,7 +25,6 @@ columns:
 ### 2026-10-10 备忘
 id: demo-memo-1
 type: generic
-欢迎使用 Apex Dashboard！点击此处编辑你的第一条备忘。
 
 ### 提示：Dashboard 文件路径
 id: demo-memo-path
